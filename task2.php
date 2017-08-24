@@ -41,4 +41,10 @@ $user3->login = 'Kolyan';
 $user3->email = 'kolyan@re.re';
 
 $car1->driver = $user1;
-var_dump($car1);
+$car2->driver = $user2;
+$car3->driver = $user3;
+print_r($car1);
+echo '<hr>';
+print_r($car2);
+echo '<hr>';
+print_r($car3);
