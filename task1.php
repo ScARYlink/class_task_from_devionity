@@ -5,7 +5,7 @@
 class User
 {
     public $login;
-    public $password;
+    protected $password;
     public $email;
     public $rating = 0;
 }
