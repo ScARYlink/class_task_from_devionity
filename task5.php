@@ -9,20 +9,20 @@
 
 class User
 {
-    public $login;
+    public $login = "";
     protected $password;
     public $email;
     public $rating = 0;
-    public $isLogged=true;
+    public $isLogged = false;
 
-    public function login()
-    {
-            echo "success login!" . "<br>";
+    public function login() {
+        $this->isLogged=true;
+        echo "<br>"."success login my lord "."$this->login"."<br>";
     }
 
-    public function logout()
-    {
-            echo "bye for now";
+    public function logout() {
+        $this->isLogged=false;
+        echo "bye for now";
     }
 }
 
@@ -39,12 +39,15 @@ class Car {
     }
 }
 $car1 = new Car;
-$car2 = new Car;
-
 $car1->brand = 'Toyota';
 $car1->model = 'Corolla';
 $car1->year = 2000;
 $car1->showBrand();
 $car1->showModel();
+
+$user1 = new User;
+$user1->login = 'Andrew';
+$user1->email = 'andrew@re.re';
+$user1->login();
 
 
