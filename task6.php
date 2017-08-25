@@ -12,7 +12,7 @@ class Car {
     public $model;
     public $year;
     public $driver;
-    private $price="";
+    private $price;
 
     public function showBrand() {
         echo $this->brand;
@@ -25,6 +25,10 @@ class Car {
         switch ($price) {
             case (is_integer($price)):
                 $this->price = $price;
+                break;
+            case (is_float($price)):
+                $this->price = $price;
+                echo round($price, 2);
                 break;
             default: echo "stupid!";
         }
@@ -42,5 +46,5 @@ $car1->year = 2000;
 $car1->showBrand();
 $car1->showModel();
 
-$car1->set(sdf);
+$car1->set(234.345);
 
